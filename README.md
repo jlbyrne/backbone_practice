@@ -15,4 +15,3 @@ Please add the following functionality to this application:
 - Feel free to use bootstrap to style the list/form, but please don't use other third-party js without asking.
 - Pay special attention to preventing memory leaks when removing users.
 - Feel free to use the internet, but please don't plagiarize.
-- Please push your changes to a branch of master in this repo.
