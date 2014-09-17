@@ -5,7 +5,7 @@ This will compile the js and less files, start a static http server, and rebuild
 
 ## The Goal
 
-There is a basic 'hello, world!' application setup with backbone and browserify.
+There is a basic 'hello, world!' application setup with backbone, underscore templates, and browserify.
 Please add the following functionality to this application:
 
 - Create a list of users with the fields: `name`, `email`, `phone`.
