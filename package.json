@@ -21,7 +21,6 @@
     "jquery": "~2.1.1"
   },
   "devDependencies": {
-    "gulp-tmpl": "git+https://git@github.com/b3nj4m/gulp-tmpl.git#0.1.0",
     "gulp-autoprefixer": "0.0.4",
     "gulp-clean": "~0.2.4",
     "gulp-concat": "~2.1.7",

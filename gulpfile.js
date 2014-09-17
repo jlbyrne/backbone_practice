@@ -13,7 +13,6 @@ var jshint = require('gulp-jshint');
 var clean = require('gulp-clean');
 var connect = require('connect');
 var http = require('http');
-var template = require('gulp-tmpl');
 var serveStatic = require('serve-static');
 
 gulp.task('lint', function() {
