@@ -1,6 +1,6 @@
 ## front-end-take-home
 
-There is a gulp development task setup for you, just run `gulp dev` from the root of the project.
+There is a gulp development task setup for you, just install gulp globally using npm (`npm install -g gulp`) and run `gulp dev` from the root of the project.
 This will compile the js and less files, start a static http server, and rebuild js and less files when they change.
 
 ## The Goal
