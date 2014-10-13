@@ -104,7 +104,7 @@ function watch() {
   gulp.watch(['!dev/templates/index.tpl', 'dev/templates/**/*.tpl'], ['scripts-dev']);
   gulp.watch('dev/templates/index.tpl', ['index-dev']);
   gulp.watch('static/**/*', staticFileChanged);
-  gutil.log('watchin yo shit...');
+  gutil.log('watching files for changes...');
 }
 
 gulp.task('watch', watch);
