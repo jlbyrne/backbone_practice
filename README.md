@@ -17,3 +17,4 @@ Please add the following functionality to this application using backbone:
 - Feel free to use the internet, but please don't plagiarize.
 - Feel free to create whatever models, views, collections you think are appropriate.
 - Feel free to delete AppView.js, it is there purely for demonstration purposes.
+- You can add whatever less files you want to `dev/css`, and they will be compiled by gulp.
