@@ -9,4 +9,5 @@ $(window.document).ready(function() {
     el: window.document.getElementById('main')
   });
   appView.render();
+  appView.start();
 });

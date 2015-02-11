@@ -1,5 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@green-lt: #4CC36E;
+@green-md: #3BC163;
+@green-dk: #147C36;
+@background-dk: #2D3339;
+@background-lt: #EDEFF0;
+@text: #657380;
+@text-lt: #FFFFFF;
+
+body {
+	background-color: @background-dk;
+}
+
 #main {
-  h1 {
-    color: orange;
+  background-color: @background-dk;
+  font-family: 'Lato', sans-serif;
+  color: @text;
+
+  .clear {
+  	clear: both;
+  }
+  button {
+  	background-color: @green-lt;
+  	color: @text-lt;
+  	border-radius: 5px;
+  	border: none;
+  	border-bottom: 3px solid @green-dk;
+  	padding: 10px 15px;
+		font-size: 1em;
+  }
+  .header {
+  	margin: 10px;
+  	margin-top: 20px;
+  	width: 100%;
+	  h1 {
+	  	font-family: 'Lobster Two', cursive;
+	    color: @green-lt;
+	    display: inline-block;
+	    font-size: 4em;
+	    margin: 0px;
+	    text-align: center;
+	  }
+		button {
+			display: inline-block;
+			float: right;
+			margin-top: 25px;
+			margin-right: 20px;
+		}
+
+	}
+  div.userForm {
+
+  }
+  div.userList {
+  	background-color: @background-lt;
+  	padding: 2%;
+  	border-radius: 5px;
   }
 }
