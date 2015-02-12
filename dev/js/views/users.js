@@ -2,7 +2,7 @@ var Backbone = require('backbone');
 var UserView = require('./user');
 
 module.exports = Backbone.View.extend({
-	className: 'userList content',
+	className: 'userList',
 	initialize: function(){
 		this.listenTo(this.collection, 'add', this.addOne);
 		this.listenTo(this.collection, 'reset', this.addAll);

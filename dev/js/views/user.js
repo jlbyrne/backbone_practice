@@ -1,5 +1,6 @@
 var Backbone = require('backbone');
 var tpl = require('../../templates/user.tpl');
+var $ = require('jquery');
 
 module.exports = Backbone.View.extend({
 	template: tpl,
@@ -18,10 +19,11 @@ module.exports = Backbone.View.extend({
 	events: {
 		'click button.delete-btn': 'removeUser'
 	},
-	remove: function(){
-		this.$el.remove();
-	},
 	removeUser: function(){
-		this.model.destroy();
+		var that = this;
+		$(this.el).slideUp("slow", function(){
+			that.$el.remove();
+			that.model.destroy();
+		});
 	}
 });

@@ -1,8 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:700);
-@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 @green-lt: #4CC36E;
 @green-md: #3BC163;
 @green-dk: #147C36;
+@danger-lt: #ED4545;
+@danger-med: #dc3434;
+@danger-dk: #942A2A;
 @background-dk: #2D3339;
 @background-lt: #EDEFF0;
 @text: #657380;
@@ -16,6 +19,8 @@ body {
   background-color: @background-dk;
   font-family: 'Lato', sans-serif;
   color: @text;
+  max-width: 1000px;
+  margin: 0 auto;
 
   .clear {
   	clear: both;
@@ -28,6 +33,11 @@ body {
   	border-bottom: 3px solid @green-dk;
   	padding: 10px 15px;
 		font-size: 1em;
+		font-family: 'Lato', sans-serif;
+
+		&:hover {
+			background-color: @green-md;
+		}
   }
   .header {
   	margin: 10px;
@@ -40,21 +50,89 @@ body {
 	    font-size: 4em;
 	    margin: 0px;
 	    text-align: center;
+	    @media (max-width:660px) {
+	    	width: 95%;
+	    	margin: 0 auto;
+	    }
 	  }
-		button {
+		.nav-btn {
 			display: inline-block;
 			float: right;
 			margin-top: 25px;
 			margin-right: 20px;
+			margin-left: 15px;
+			text-align: center;
+			@media (max-width:660px) {
+				float: none;
+				margin: 15px 0px;
+				width: 95%;
+	    }
 		}
-
 	}
-  div.userForm {
+  div.formContainer {
+  	display: none;
+  	form {
+  	  background-color: @background-lt;
+  		padding: 15px;
+  		border-radius: 5px;
+  		margin: 15px;
+  	}
+
+  	.help {
+  		color: @danger-med;
+  	}
+
+  	input {
+  		font-family: 'Lato', sans-serif;
+  		color: @text;
+  		border-radius: 5px;
+  		padding: 5px;
+  		border: 2px solid @text;
+  		margin: 10px 0px;
+  		font-size: 1em;
+  		width: 95%;
+  		max-width: 350px;
+
+  		&.error {
+  			border-color: @danger-med;
+  		}
+  	}
 
   }
   div.userList {
-  	background-color: @background-lt;
-  	padding: 2%;
-  	border-radius: 5px;
+  	.user {
+  		background-color: @background-lt;
+  		padding: 15px;
+  		border-radius: 5px;
+  		margin: 15px;
+
+  		.info {
+  			float: left;
+  			@media (max-width:660px) {
+	  			width: 100%;
+	  		}
+
+	  		div{
+	  			margin-bottom: 5px;
+	  		}
+	  	}
+  	}
+		button.delete-btn {
+			display: inline-block;
+			float: right;
+			margin-top: 20px;
+  		background-color: @danger-lt;
+  		border-color: @danger-dk;
+  		padding: 5px 10px;
+  		
+  		&:hover {
+  			background-color: @danger-med;
+  		}
+  		@media (max-width:660px) {
+  			float: none;
+  			display: block;
+  			margin-top: 10px;
+  		}
+  	}
   }
 }
