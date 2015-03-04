@@ -3,6 +3,6 @@ var User = require('../models/user');
 
 module.exports = Backbone.Collection.extend({
 	model: User,
-	url: 'https://mysterious-spire-6652.herokuapp.com/user'
+	url: 'https://practice-api.herokuapp.com/user'
 });
 

@@ -20,11 +20,11 @@ module.exports = Backbone.View.extend({
 		e.preventDefault();
 
 		var newName = this.$('input[name=name]').val();
-		var newEmail = this.$('input[name=email]').val();
-		var newPhone = this.$('input[name=phone]').val();
+		var newColor = this.$('input[name=color]').val();
+		var newNumber = this.$('input[name=number]').val();
 
 		var that = this;
-		this.model.save({name: newName, email: newEmail, phone: newPhone}, {
+		this.model.save({name: newName, color: newColor, number: newNumber}, {
 			success: function(model, response, options) {
 				that.hideErrors();
 				that.collection.add(model);
@@ -34,14 +34,14 @@ module.exports = Backbone.View.extend({
 			}, error: function(model, xhr, options) {
 				var errors = xhr.responseJSON;
 				var newErrors = [];
-				if (errors.phone) {
-					newErrors.push({name: 'phone', message: errors.phone.join(", ")});
+				if (errors.number) {
+					newErrors.push({name: 'number', message: errors.number.join(", ")});
 				}
 				if (errors.name) {
 					newErrors.push({name: 'name', message: errors.name.join(", ")});
 				}
-				if (errors.email) {
-					newErrors.push({name: 'email', message: errors.email.join(", ")});
+				if (errors.color) {
+					newErrors.push({name: 'color', message: errors.color.join(", ")});
 				}
 				that.showErrors(model, newErrors);
 			}
@@ -52,11 +52,12 @@ module.exports = Backbone.View.extend({
 		this.$('.help').text('');
 	},
 	showErrors: function(model, error, options){
+		console.log(error);
 		error.forEach(function(myError) {
 			this.$("." + myError.name + ".help").text(myError.message);
 			this.$("." + myError.name + "Input").addClass('error');
 		}, this);
-	}, 
+	},
 	toggle: function(){
 		if ( $(this.el).is(':visible') ) {
 			$(this.el).slideUp('slow');
